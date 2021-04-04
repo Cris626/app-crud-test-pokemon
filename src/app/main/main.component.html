@@ -1,0 +1,12 @@
+<div *ngIf="!flag" class="container-login">
+    <app-login (authentication)="handleAuthentication($event)"></app-login>
+</div>
+<div *ngIf="flag" class="container-menu">
+    <app-header 
+        (sessionExit)="sessionOut($event)" 
+        (mainPokemons)="handleMain($event)"
+        (myPokemons)="handleMyPokemons($event)"
+    ></app-header>
+    <app-list-pokemon *ngIf="main"></app-list-pokemon>
+    <app-pokemons *ngIf="myPokemon"></app-pokemons>
+</div>

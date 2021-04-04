@@ -1,0 +1,36 @@
+.pokemon-selected{
+    display: flex;
+    align-items: center;
+}
+
+.pokemon-selected .img-pokemon-selected{
+    width: 500px;
+    height: 392px;
+    /* background-image: url("../../../../images/033.png"); */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pokemon-selected .info-pokemon-selected h5{
+    padding-top: 5px;
+    margin-left: 20px;
+    font-size: 25px
+}
+
+.pokemon-selected .info-pokemon-selected .btn-pokemon-selected{
+    margin-top: 50px;
+    width: 400px;
+}
+
+input{
+    outline: none;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    vertical-align: baseline;
+    border-bottom: solid 1px;
+    /* height: 60px; */
+    font-size: 25px;
+    margin-left: 15px;
+}
+

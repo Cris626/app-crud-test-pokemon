@@ -1,0 +1,26 @@
+.container-pokemons-main{
+    height: 100%;
+    background-color: #0D1225;
+    color: white;
+}
+.container-pokemon{
+    padding: 20px 50px 50px 50px;
+}
+.container-pokemon .info-main{
+    text-align: center;
+}
+.container-pokemon .info-main img{
+    align-items: center;
+    width: 400px;
+}
+.container-pokemon .info-main .container-info{
+    font-style: italic;
+    font-size: 20px;
+}
+.container-pokemon .view-list-pokemon{
+    display: flex;
+}
+.container-pokemon .view-list-pokemon .row .card{
+    background-color: #27347D;
+    margin: 15px;
+}

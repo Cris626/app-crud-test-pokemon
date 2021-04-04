@@ -1,0 +1,25 @@
+<div class="container-pokemons-main">
+    <div class="container-pokemon">
+        <div class="info-main">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="">
+            <h1>BIENVENIDO ENTRENADOR POKEMON</h1>
+            <div class="container-info">
+                <p>A continuación, usted podrá observar una lista de pokemones registrados donde podrá agregar a su lista personalidad de pokemones obtenidos y asi mismo poder administrar
+                    esa lista personalidad que usted tiene podrá ver, agregar, editar el nombre del pokemon y eliminar de la lista los pokemones que ya no cuenta en su pokedex.</p>
+            </div>
+        </div>
+        <div class="container view-list-pokemon">
+            <div class="row">
+                <div *ngFor="let i of pokemons" class="card" style="width: 18rem;">
+                    {{imageGet(i.id)}}
+                    <img src="{{nameImage}}.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{i.name}}</h5>
+                        <p class="card-text">{{i.typeList}}</p>
+                        <button (click)="showNamePokemon(i)" class="btn btn-primary">Agregar pokemon</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

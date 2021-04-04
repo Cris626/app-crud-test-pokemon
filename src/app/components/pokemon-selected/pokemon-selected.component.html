@@ -1,0 +1,23 @@
+<div class="container pokemon-selected">
+    <h1>Pokemon {{namePokemon.name}}</h1>
+    <!-- <div class="img-pokemon-selected"> -->
+    <div class="img-pokemon-selected" style="background-image: url({{nameImage}}.png);" >
+    </div>
+    <div class="info-pokemon-selected">
+        <div class="name-pokemon" style="display: flex;">
+            <h4>Nombre: </h4><h5 *ngIf="!edit" class="card-title">{{namePokemon.name}}</h5>
+            <input *ngIf="edit" class="input-edit" id="{{namePokemon.id}}" placeholder="Alias del pokemon" value="{{namePokemon.name}}" [(ngModel)]="nameNewPokemon" autocomplete="off">
+        </div>
+        <div class="type-pokemon" style="display: flex;">
+            <h4>Tipo: </h4><h5 class="card-title">{{namePokemon.typeList}}</h5>
+        </div>
+        <div *ngIf="!edit" class="btn-pokemon-selected" >
+            <button class="btn btn-primary" (click)="handleBack()">Atras</button>
+            <button class="btn btn-primary" (click)="handleEdit(namePokemon.name)" style="float: right;">Editar Nombre</button>
+        </div>
+        <div *ngIf="edit" class="btn-pokemon-selected" >
+            <button class="btn btn-primary" (click)="handleCancel()">Cancelar</button>
+            <button class="btn btn-primary" (click)="handleSavePokemon(namePokemon.id)" style="float: right;">Guardar</button>
+        </div>
+    </div>
+</div>

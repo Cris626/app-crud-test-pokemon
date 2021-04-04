@@ -1,0 +1,45 @@
+<div class="container-pokemons-main">
+    <div class="container-pokemon">
+        <div class="info-main">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png" alt="">
+            <div class="title-text-info">
+                <h1>BIENVENIDO  ENTRENADOR POKEMON {{name}}</h1>
+                <div class="container-info">
+                    <p>Bienvenido {{name}} a su lista personal de pokemon, donde usted podrá agregar a los pokemons que tiene 
+                        en su pokedex dirigiendose a la pesaña "POKEMONES", tambien podrá eliminar y editar el nombre de cualquier pokemon que tenga
+                        en su lista personal.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container my-pokemons">
+            <div class="title-info">
+                <h1>POKEMON REGISTRADOS</h1>
+            </div>
+            <div *ngIf="edit" class="container polemon-selected">
+                <app-pokemon-selected [namePokemon]="pokemon.data" (handlePokemonBack)="handleBack($event)" (handlePokemonEdit)="editNamePokemon($event)" ></app-pokemon-selected>
+            </div>
+            <div *ngIf="!edit" class="container list-my-pokemons">
+                <div class="row">
+                    <div class="card" *ngFor="let i of data" style="width: 18rem;">
+                        {{imageGet(i.id)}}
+                        <img src="{{nameImage}}.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{i.name}}</h5>
+                            <p class="card-text">{{i.typeList}}</p>
+                            <button class="btn btn-primary" (click)="handleDeletePokemon(i.id)">Eliminar</button>
+                            <button class="btn btn-primary" mat-raised-button (click)="handleEdit(i)" style="float: right;">Ver Pokemon</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="container-pokemon-null" *ngIf="data.length===0">
+                    <div>
+                        <h3>No tienes Pokemons registrados</h3>
+                        <img style="width: 100px;" src="https://lh3.googleusercontent.com/proxy/LnZ8ff9YWDgflrT0egU2EpT8sCcdHxlTcNussibLDFs8arIm6qc09JyHjspUsS7LOT9cHylTK8Eb7td92nK8iNcNB-_LC6w66Q71kxQ3Ra__NbfXGsIAdUuBgfDgEk7TOPPW">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

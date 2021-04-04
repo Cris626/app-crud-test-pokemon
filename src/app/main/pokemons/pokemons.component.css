@@ -1,0 +1,44 @@
+.container-pokemons-main{
+    height: 100%;
+    min-height: 913px;
+    background-color: #0D1225;
+    color: white;
+}
+.container-pokemon{
+    padding: 20px 50px 50px 50px;
+}
+.container-pokemon .info-main{
+    text-align: center;
+    display: flex;
+}
+.container-pokemon .info-main img{
+    align-items: center;
+    width: 200px;
+}
+.container-pokemon .info-main .title-text-info{
+    text-align: center;
+    padding-left: 20px;
+}
+.container-pokemon .info-main .title-text-info h1{
+    text-transform: uppercase;
+}
+.container-pokemon .my-pokemons .title-info{
+    text-align: center;
+}
+
+.container-pokemon .my-pokemons .list-my-pokemons{
+    display: flex;
+}
+.container-pokemon .my-pokemons .row .card{
+    background-color: #27347D;
+    margin: 15px;
+}
+
+.container-pokemon .my-pokemons .list-my-pokemons .container-pokemon-null{
+    text-align: center;
+    margin: auto;
+    height: auto;
+    vertical-align: middle;
+    color: green !important;
+    display: flex;
+}
