@@ -1,20 +1,20 @@
 <div class="container-header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">INICIO</a>
+            <button class="navbar-brand">INICIO</button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" (click)="handleMainPokemons()" href="#">POKEMONES</a>
+                    <button class="nav-link active" aria-current="page" (click)="handleMainPokemons()" >POKEMONES</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" (click)="handleMyPokemons()" href="#">MIS POKEMONES</a>
+                    <button class="nav-link active" aria-current="page" (click)="handleMyPokemons()" >MIS POKEMONES</button>
                 </li>
                 <li class="nav-item">
-                    <a (click)="logout()" class="nav-link active" aria-current="page" href="http://localhost:4200">CERRAR SESION</a>
+                    <button (click)="logout()" class="nav-link active" aria-current="page">CERRAR SESION</button>
                 </li>
                 </ul>
                 <form class="d-flex">

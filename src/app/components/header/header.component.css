@@ -1,0 +1,7 @@
+.container-header button{
+    outline: none;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    vertical-align: baseline;
+}

@@ -17,9 +17,10 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(){
-    this.sessionExit.emit({ auth: false })
-    localStorage.setItem("auth", "false")
-    alert('Cerró sesión')
+    this.sessionExit.emit({ auth: false });
+    localStorage.setItem("auth", "false");
+    location.reload();
+    alert('Cerró sesión');
   }
 
   handleMainPokemons(){

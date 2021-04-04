@@ -23,7 +23,8 @@
                 <div class="row">
                     <div class="card" *ngFor="let i of data" style="width: 18rem;">
                         {{imageGet(i.id)}}
-                        <img src="{{nameImage}}.png" class="card-img-top">
+                        <img src="../../../../images/{{nameImage}}.png" class="card-img-top">
+                        <!-- <img src="{{nameImage}}.png" class="card-img-top"> -->
                         <div class="card-body">
                             <h5 class="card-title">{{i.name}}</h5>
                             <p class="card-text">{{i.typeList}}</p>
