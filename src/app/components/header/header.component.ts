@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   logout(){
     this.sessionExit.emit({ auth: false });
     localStorage.setItem("auth", "false");
-    location.reload();
+    // location.reload();
     alert('Cerró sesión');
   }
 
